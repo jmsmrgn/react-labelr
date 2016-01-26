@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './styles/main.css'
 
 const Zuul = React.createClass({
   render() {
-    return <p>Are you the {this.props.name}?</p>
+    return <p>I am Zuul. Are you the {this.props.name}?</p>
   }
 });
 
