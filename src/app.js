@@ -1,10 +1,13 @@
 import React from 'react';
-import styles from './styles/main.css'
+import Router from './router';
+import styles from './styles/main.styl';
 
-const Zuul = React.createClass({
-  render() {
-    return <p>I am Zuul. Are you the {this.props.name}?</p>
+// initialize router
+window.app = {
+  init() {
+    this.router = new Router();
+    this.router.history.start();
   }
-});
+}
 
-React.render(<Zuul name="gatekeeper"/>, document.body);
+window.app.init();
