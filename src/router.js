@@ -1,5 +1,6 @@
 import React from 'react';
 import Router from 'ampersand-router';
+import Layout from './layout';
 import ReposPage from './pages/repos';
 import PublicPage from './pages/public';
 
