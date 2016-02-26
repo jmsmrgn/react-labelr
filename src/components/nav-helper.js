@@ -1,8 +1,9 @@
 import React from 'react';
 import localLinks from 'local-links';
+import app from 'ampersand-app';
 
 class NavHelper extends React.Component {
-  onClick(event) {
+  onClick (event) {
     const pathname = localLinks.getLocalPathname(event);
 
     if (pathname) {
@@ -11,7 +12,7 @@ class NavHelper extends React.Component {
     }
   }
 
-  render() {
+  render () {
     return (
       <div {...this.props} onClick={this.onClick}>
         {this.props.children}
