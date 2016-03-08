@@ -2,7 +2,7 @@ import React from 'react';
 import localLinks from 'local-links';
 import app from 'ampersand-app';
 
-class NavHelper extends React.Component {
+export default React.createClass({
   onClick (event) {
     const pathname = localLinks.getLocalPathname(event);
 
@@ -10,7 +10,7 @@ class NavHelper extends React.Component {
       event.preventDefault();
       app.router.history.navigate(pathname);
     }
-  }
+  },
 
   render () {
     return (
@@ -19,6 +19,4 @@ class NavHelper extends React.Component {
       </div>
     );
   }
-}
-
-export default NavHelper;
+});

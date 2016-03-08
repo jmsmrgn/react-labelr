@@ -1,7 +1,7 @@
 import React from 'react';
 import NavHelper from '../components/nav-helper';
 
-class PublicPage extends React.Component {
+export default React.createClass({
   render () {
     return (
       <NavHelper className='container'>
@@ -17,6 +17,4 @@ class PublicPage extends React.Component {
       </NavHelper>
     );
   }
-}
-
-export default PublicPage;
+});

@@ -1,10 +1,11 @@
 import React from 'react';
-import reactMixin from 'react-mixin';
 import ampersandMixin from 'ampersand-react-mixin';
 import NavHelper from './components/nav-helper';
 
-class Layout extends React.Component {
-  displayName: 'Layout'
+export default React.createClass({
+  mixins: [ampersandMixin],
+
+  displayName: 'Layout',
 
   render () {
     const {me} = this.props;
@@ -26,8 +27,4 @@ class Layout extends React.Component {
       </NavHelper>
     );
   }
-}
-
-reactMixin.onClass('Layout', ampersandMixin.watch);
-
-export default Layout;
+});
